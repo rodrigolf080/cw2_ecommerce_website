@@ -71,87 +71,117 @@ a{
     padding-left: 10px;
 }
 
-/* Sign up menu */
-
-.modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 500px;
-  }
-
-.modal-dialog{
-    width:450px;
-    background-color: #ffffff;
-    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
-    border-radius: 5px;
+body{
+    margin: 0;
+    padding: 0;
+    background: url(pic1.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
 }
 
-.modal-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.loginbox{
+    width: 320px;
+    height: 360px;
+    color: black;
+    box-sizing: border-box;
+    padding: 70px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    box-shadow: 2px 3px 4px 3px rgba(0,0,0,0.1);
 }
 
-.modal-content strong{
-    color: #272727;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 500;
+
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+
 }
 
-.modal-body input{
-   width: 350px;
-   border: 1px solid black;
-   height: 35px;
-   margin: 6px 0px;
-   padding: 0px 10px;
-   border-radius: 7px;
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+
 }
 
-.modal input[type="submit"]{
-    background-color: #8BDBF7;
-    color: #ffffff;
+.loginbox input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: black;
+    font-size: 16px;
+}
+
+.loginButton
+{
     border: none;
     outline: none;
-    text-transform: uppercase;
-    border-radius: 3px;
-    width: 350px;
-    height: 35px;
+    height: 40px;
+    background: #8BDBF7;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    
 }
 
-.modal input[type="submit"]:hover{
-    cursor: pointer;
-    background-color: #42abd1;
+.logOutButton{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #8BDBF7;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-.modal-btns{
-    width: 350px;
+.log{
+    font-size: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
+}
+.loginButton:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
 }
 
-.modal-btns a{
-    color: #4d4d4d;
-    font-size: 15px;
+.logOutButton:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+.loginbox a{
     text-decoration: none;
+    font-size: 15px;
+    color: darkgrey;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+
 }
 
-.modal-btns a:hover{
-    color: black;
+.loginbox a:hover
+{
+    color: #ffc107;
 }
 
-.modal-header button{
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    color: #868686;
-    outline: none;
-}
+
+
 
 /* Navbar */
 nav{
@@ -1027,7 +1057,6 @@ td img{
 .registerBtn{
     margin-top: 20px;
     margin-bottom: 20px;
-    
 }
 
 

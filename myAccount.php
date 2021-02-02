@@ -4,13 +4,11 @@
     outputBannerNavigation("Home");
 ?>
 
-        <!-- Registry form -->
-        
+    <!-- Register form -->  
     <div class="registerContainer">
-  		<form name="registerForm">
-			<div class="col-12">
+        <form name="registerForm" action="register.php" method="post">
+          <div class="col-12">
 				<div class="row">
-
 					<div class="col-6 form-group lead">
     					<label for="firstNameInput">First Name</label>
     					<input type="text" class="form-control" name="firstName" placeholder="First Name" required>
@@ -33,12 +31,12 @@
 				
   					<div class="col-6 form-group lead">
     					<label for="pwdInput">Password</label>
-    					<input type="password" class="form-control" name="pwd" placeholder="Password" required>
+    					<input type="password" class="form-control" name="password" placeholder="Password" required>
 					</div>
 
 					<div class="col-6 form-group lead">
-    					<label for="pwdRepeat">Repeat Password</label>
-    					<input type="password" class="form-control" name="pwdRepeat" placeholder="Password" required>
+    					<label for="passwordRepeat">Repeat Password</label>
+    					<input type="password" class="form-control" name="passwordRepeat" placeholder="Password" required>
 					</div>
 
 					<div class="col-12 form-group lead">
@@ -52,17 +50,40 @@
 					</div>
 
 					<div class="col-5 form-group lead">
-    					<label for="post">Post Code</label>
-    					<input type="text" class="form-control" name="post" placeholder="Post Code" required>
+    					<label for="postCode">Post Code</label>
+    					<input type="text" class="form-control" name="postCode" placeholder="Post Code" required>
 					</div>
 
 					<div class="col-12 text-right registerBtn">
-						<button type="submit" class="btn btn-info btn-lg">Register</button>
+						<button type="submit" onclick="register()" class="btn btn-info btn-lg">Register</button>
 					</div>
 			</div> 
-		</form>
+        </form>
     </div>
 
+
+
+    <script>
+    function register(){
+	//Create request object 
+	var request = new XMLHttpRequest();
+
+	//Create event handler that specifies what should happen when server responds
+	request.onload = function(){
+		//Check HTTP status code
+		if(request.status === 200){
+			//Get data from server
+			var responseData = request.responseText;
+
+			//Add data to page
+			var x = responseData;
+			alert(x);
+		}
+		else
+			alert("Error communicating with server: " + request.status);
+	};
+    <script>
+    
 <?php
         outputFooter("Home");
 ?>
