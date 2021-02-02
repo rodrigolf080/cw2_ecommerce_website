@@ -37,34 +37,8 @@ function outputHeader($page_title){
                         <i class="fas fa-shopping-cart"></i>
                     </a>
                 </div>
-                <div class="modal fade" role="dialog" id="registerModal" style="display:none">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <strong>Sign up</strong>
-                                <button type="button" class="close" data-dismiss="modal">x</button>
-                            </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <input type="text" name="E-mail" class="form-control" placeholder="E-mail">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="username" class="form-control" placeholder="Username">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" name="password" class="form-control" placeholder="Password">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="submit" value="Sign up"/>  
-                        </div>
-                        <div class="modal-btns">
-                            <a href="#loginModal" data-toggle="modal" data-dismiss="modal" >Log in</a>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" role="dialog" id="loginModal" style="display:none">
+                
+                <div class="modal fade" role="dialog" id="loginModal">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -82,9 +56,6 @@ function outputHeader($page_title){
                         <div class="modal-footer">
                             <input type="submit" value="Log in"/>  
                         </div>
-                        <div class="modal-btns">
-                            <a href="#registerModal" data-toggle="modal" data-dismiss="modal">Create Account</a>
-                        </div>
                         </div>
                     </div>
                 </div>             
@@ -98,7 +69,7 @@ function outputBannerNavigation($pageName){
     echo '<div class="navigationbar">';
     echo '<ul class="menu">';
         //Array of pages to link to
-        $linkNames = array("Home", "Shop", "About", "Contact", "My Account");// this is the pageName of HTML file
+        $linkNames = array("Home", "Shop", "About", "Contact", "Sign up");// this is the pageName of HTML file
         $linkAddresses = array("index.php", "shop.php","about.php", "contact.php", 'myAccount.php'); // the link
         //Output navigation
         for($x = 0; $x < count($linkNames); $x++){ // goes through the links to find matching pageName
@@ -110,6 +81,8 @@ function outputBannerNavigation($pageName){
     echo '</ul>';
     echo '</div>'; 
     echo '</nav>';
+    echo '<div class ="shadow">';
+    echo '</div>';
 }
 
 function outputFooter(){
@@ -142,4 +115,6 @@ function outputFooterCMS(){
     }
 
 ?>
+
+
 

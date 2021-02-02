@@ -6,6 +6,7 @@ body{
     padding: 0px;
     font-family: poppins;
     background-color: #ffffff;
+    
 }
 
 *{
@@ -45,7 +46,7 @@ a{
 }
 
 .box{
-    width: 500px;
+    width: 520px;
     height: 50px;
     background-color: white;
     border-radius: 30px;
@@ -53,7 +54,7 @@ a{
     align-items: center;
     padding: 10px;
     border: 1px solid black;
-    margin-right: 10px;
+    margin-right: 40px;
 }
 
 .box > i{
@@ -154,9 +155,13 @@ a{
 
 /* Navbar */
 nav{
-    width: 100%;
-    box-shadow: 2px 2px 0px rgba(0,0,0,0.05);
+    width: 1400px;
     z-index: 100; 
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu{
@@ -170,6 +175,16 @@ nav{
     display: flex;
     text-transform: uppercase;
     font-weight: 500;
+}
+
+.shadow{
+    width: 100%;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+    margin-top: 10px;
+}
+
+.menu li:first-child{
+    margin-left: 0px;
 }
 
 .menu li a{
@@ -503,6 +518,7 @@ nav{
     padding: 10px;
     border-top: 1px solid rgba(0,0,0,0.1);
     margin-top: 20px;
+    height: 50px;
 }
 
 .copyright{
@@ -807,7 +823,7 @@ section::before{
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
-    margin-bottom: 650px; 
+    margin-bottom: 200px;
 }
 
 .cms-container .input-group a{
@@ -999,3 +1015,26 @@ td img{
     height: 150px;
     margin-right: 10px;
 }
+
+/* Register form **/
+.registerContainer{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.registerBtn{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+
+
+
+
+
+
+  
+
