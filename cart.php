@@ -18,7 +18,7 @@
                     <img src="jpg/razer1.jpg"/>
                     <div>
                         <p>Razer headset</p>
-                        <small>Price: £20.00</small>
+                        <small>Price: £25.00</small>
                         <br>
                         <a href="#">Remove</a>
                     </div>

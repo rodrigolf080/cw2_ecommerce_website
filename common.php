@@ -30,34 +30,12 @@ function outputHeader($page_title){
                 <input type="text" name="">
                 </div>
                 <div class="right-menu">
-                    <a href="#loginModal" data-toggle="modal" >
+                    <a href="login.php">
                         <i class="far fa-user"></i>
                     </a>
                     <a href="../cart.php" >
                         <i class="fas fa-shopping-cart"></i>
                     </a>
-                </div>
-                
-                <div class="modal fade" role="dialog" id="loginModal">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <strong>Log in</strong>
-                                <button type="button" class="close" data-dismiss="modal">x</button>
-                            </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <input type="text" name="username" class="form-control" placeholder="Username">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" name="password" class="form-control" placeholder="Password">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="submit" value="Log in"/>  
-                        </div>
-                        </div>
-                    </div>
                 </div>             
             </div>      
         </div>
@@ -115,6 +93,7 @@ function outputFooterCMS(){
     }
 
 ?>
+
 
 
 
