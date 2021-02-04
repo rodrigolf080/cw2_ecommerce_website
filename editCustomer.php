@@ -10,28 +10,28 @@
     $collection = $db->Customers;
 
     //Extract the data that was sent to the server
-    $firstName= filter_input(INPUT_POST, 'firstName', FILTER_SANITIZE_STRING);
-    $lastName = filter_input(INPUT_POST, 'lastName', FILTER_SANITIZE_STRING);
-    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
-    $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
-    $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
-    $city = filter_input(INPUT_POST, 'city', FILTER_SANITIZE_STRING);
-    $postCode = filter_input(INPUT_POST, 'postCode', FILTER_SANITIZE_STRING);
+    $NewEmail= filter_input(INPUT_POST, 'NewEm', FILTER_SANITIZE_STRING);
+    $NewName= filter_input(INPUT_POST, 'NewNam', FILTER_SANITIZE_STRING);
+    $NewSurname = filter_input(INPUT_POST, 'NewSur', FILTER_SANITIZE_STRING);
+    $NewPhone = filter_input(INPUT_POST, 'NewPh', FILTER_SANITIZE_STRING);
+    $NewAddress = filter_input(INPUT_POST, 'NewAdd', FILTER_SANITIZE_STRING);
+    $NewCity = filter_input(INPUT_POST, 'NewCit', FILTER_SANITIZE_STRING);
+    $NewpostCode = filter_input(INPUT_POST, 'NewPost', FILTER_SANITIZE_STRING);
+    
 
 
 
     $findCriteria = [
-        "email" => $email, 
+        "email" => $NewEmail, 
      ];
 
      $updateCriteria = [
-        '$set' => [ "firstName" => $firstName, 
-                    "lastName" => $lastName, 
-                    "email" => $email,
-                    "phone" => $phone,
-                    "address" => $address,
-                    "city" => $city,
-                    "postCode" => $postCode ]
+        '$set' => [ "firstName" => $NewName, 
+                    "lastName" => $NewSurname, 
+                    "phone" => $NewPhone,
+                    "address" => $NewAddress,
+                    "city" => $NewCity,
+                    "postCode" => $NewpostCode ]
     ];
 
 
@@ -39,10 +39,7 @@
     $returnVal = $db->Customers->updateOne($findCriteria, $updateCriteria);
 
     if($returnVal->getModifiedCount()){
-        echo'<script>alert("Details changed");
-        window.location.replace("viewDetails.php");</script>';
+        echo 'Customer details has been changed.';
     }
-
-   
 
 ?>
