@@ -22,6 +22,9 @@
     $city = filter_input(INPUT_POST, '_city', FILTER_SANITIZE_STRING);
     $postCode = filter_input(INPUT_POST, '_postCode', FILTER_SANITIZE_STRING);	
 
+
+    if($name != "" && $surname != "" && $email != "" && $phone != "" && $password != "" && $address != "" && $city != "" && $postCode != ""){
+
     $findCriteria = [
         "email" => $email,
     ];
@@ -50,6 +53,8 @@
   
 
     $insertResult = $collection -> insertOne($dataArray);
+
+
      //Echo result back to user
      if($insertResult->getInsertedCount()==1){
         echo 'Welcome ' . $name . ', your account has been created';
@@ -57,8 +62,13 @@
     else {
         echo 'Error adding customer';
     }
+    }
+    
+    }else{
+        echo 'Please enter all details!';
+    }
 
-   }
+   
 
 
 ?>

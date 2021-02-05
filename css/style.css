@@ -853,7 +853,45 @@ section::before{
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
+}
+
+.cms-product-cont{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+.productCont{
+    box-shadow: 2px 3px 4px 3px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.addProductsh1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-group button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.input-group button:hover{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
 }
 
 .cms-container .input-group a{
