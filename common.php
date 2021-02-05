@@ -39,6 +39,7 @@ function outputHeader($page_title){
                 </div>             
             </div>      
         </div>
+
     END;
 }
 

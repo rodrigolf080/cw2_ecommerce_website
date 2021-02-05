@@ -54,6 +54,7 @@
     					<input type="text" class="form-control" id="InputPostCode" name="postCode" placeholder="Post Code" required>
 					</div>
 
+
 					<div class="col-12 text-right registerBtn">
 						<button type="submit" onclick="register()" class="btn btn-info btn-lg">Register</button>
 					</div>
