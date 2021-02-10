@@ -29,7 +29,6 @@ $handle = $db->customers->find();
 // Output the result
 echo "<h1> Products: </h1>";
 foreach ($handle as $product)
-{   // nts: check if id is the right criteria here
     echo "<p> Product name: "  . $product['name'] . " | ID: ".$product['id'] . "</p>";
 }
 
