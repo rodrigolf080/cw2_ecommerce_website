@@ -80,6 +80,7 @@ function add_product(){
 	let desc = document.getElementById("productDescription").value;
 	let cat = document.getElementById("productCategory").value;
 	let manu = document.getElementById("productManufacturer").value;
+	// test this functionality and implement image upload
 	let img = document.getElementById("productImage").value;
 	request.send("_title=" + tit + "&_price=" + pr + "&_description=" + desc + "&_category=" + cat + "&_manufacturer=" + manu +"&_image=" +img);
 	

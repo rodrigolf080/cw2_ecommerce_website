@@ -13,6 +13,7 @@
             <th>Total</th>
         </tr>
         <tr>
+        <!-- if not logged in prompt for login/register; then take products stored in cart under customer related data and load them here-->
             <td>
                 <div class="cart-info">
                     <img src="jpg/razer1.jpg"/>
