@@ -64,7 +64,7 @@ function outputFooter(){
             Copyright 2021 - MiddlesexElectronics 
         </span>
         <div class="cms">
-        <a href="cms/cms.php">cms</a>
+        <a href="../cms/cms.php">cms</a>
         </div> 
     </div>
     </body>
@@ -79,7 +79,7 @@ function outputFooterCMS(){
                 <a href="..\shop.php">Shop</a>
                 <a href="..\about.php">Contact</a>
                 <a href="..\contact.php">Login</a>
-                <a href="cms.php">CMS</a>
+                <a href="..\cms.php">CMS</a>
             </div>
           </body>
         </html>

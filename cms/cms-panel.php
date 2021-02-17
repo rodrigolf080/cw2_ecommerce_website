@@ -1,7 +1,7 @@
 <?php
     include ('../common.php');
-    outputHeader("CMS Login");
-    outputBannerNavigation("Home");  
+    outputHeader("CMS Login");  
+	outputBannerNavigation("Home"); 
 ?>      
         
 <!--- cms navbar -->
@@ -42,5 +42,5 @@
 </script>
 
 <?php
-        outputFooterCMS();
+        outputFooter();
 ?>
