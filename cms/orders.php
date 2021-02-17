@@ -19,9 +19,11 @@
     <div id="orderContainer"></div>
 </div>
 
+
 <script>
 window.onload =view_orders;
 
+//Function to display orders
 function view_orders(){
     document.getElementById("orderContainer").innerHTML ="";
     let _request = new XMLHttpRequest();
@@ -37,28 +39,30 @@ function view_orders(){
             let newRow = table.insertRow(table.lenght);
 
            
-                var cell = newRow.insertCell(0);
+            var cell = newRow.insertCell(0);
                 cell.innerHTML = "First Name";
 
-                var cell = newRow.insertCell(1);
+            var cell = newRow.insertCell(1);
                 cell.innerHTML = "Surname";
 
-                var cell = newRow.insertCell(2);
+            var cell = newRow.insertCell(2);
                 cell.innerHTML = "Address";
 
-                var cell = newRow.insertCell(3);
+            var cell = newRow.insertCell(3);
                 cell.innerHTML = "City";
 
-                var cell = newRow.insertCell(4);
+            var cell = newRow.insertCell(4);
                 cell.innerHTML = "Post Code";
 
-                var cell = newRow.insertCell(5);
+            var cell = newRow.insertCell(5);
                 cell.innerHTML = "Date";
 
-                var cell = newRow.insertCell(6);
+            var cell = newRow.insertCell(6);
                 cell.innerHTML = "Order id";
 
+            var cell = newRow.insertCell(7);
 
+//display orders
             for (let i = 0; i < ordersArray.length; i++){
                 newRow = table.insertRow(table.length);
                 let orderId = ordersArray[i]._id.$oid;
@@ -84,6 +88,12 @@ function view_orders(){
                 cell = newRow.insertCell(6);
                 cell.innerHTML = orderId;
 
+                cell = newRow.insertCell(7);
+                cell.innerHTML = '<button id="bt" onclick= \'DeleteOrder("'+orderId+'")\'>Delete</button>'
+
+
+
+            
             }
 
         }else
@@ -93,6 +103,23 @@ function view_orders(){
     _request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     _request.send();
 }
+
+//function to delete order with passed id
+function DeleteOrder(deleteThis){
+    let _request = new XMLHttpRequest();
+    _request.onload= function(){
+        if(_request.status === 200){
+            let responseData = _request.responseText;
+			alert(responseData);
+            console.log(deleteThis);
+        }else
+            alert("Server error:" + _request.status);
+
+}
+            _request.open("POST", "delete_order.php");
+            _request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            _request.send("toBeDeleted="+deleteThis);
+            }
 </script>
 <?php
         outputFooter();

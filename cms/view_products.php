@@ -22,7 +22,7 @@
 <script>
 
 window.onload = show_products;
-
+//Function to display products
 function show_products(){
     let Table = document.getElementById("table");
     Table.innerHTML="";
@@ -51,10 +51,7 @@ function show_products(){
             var cell = newRow.insertCell(5);
                 cell.innerHTML = "Image";
 
-            var cell = newRow.insertCell(6);
-                cell.innerHTML = "Product ID"
-
-
+//display products
             for (let i = 0; i < productsArray.length; i++){
                 newRow = table.insertRow(table.length);
 
@@ -62,7 +59,7 @@ function show_products(){
                 cell.innerHTML = productsArray[i].Title;
 
                 cell = newRow.insertCell(1);
-                cell.innerHTML = productsArray[i].Price+ '£';
+                cell.innerHTML = productsArray[i].Price;
 
                 cell = newRow.insertCell(2);
                 cell.innerHTML = productsArray[i].Description;
@@ -75,9 +72,6 @@ function show_products(){
 
                 cell = newRow.insertCell(5);
                 cell.innerHTML = productsArray[i].Image;
-
-                cell = newRow.insertCell(6);
-                cell.innerHTML = productsArray[i]._id.$oid;
             }
 
         }else

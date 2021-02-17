@@ -648,7 +648,7 @@ nav{
     padding: 10px;
     border-top: 1px solid rgba(0,0,0,0.1);
     margin-top: 20px;
-    max-height: 50px;
+
 }
 
 
@@ -1205,7 +1205,7 @@ th{
 }
 
 td{
-    padding: 10px 5px;
+    padding: 10px 10px;
 }
 
 td input{
@@ -1236,6 +1236,35 @@ td img{
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
+}
+
+.checkItemBtn{
+    border: none;
+    height: 35px;
+    background-color: #8BDBF7;
+    margin-bottom: 30px;
+}
+
+.log a{
+    text-decoration: none;
+    color: black;
+}
+
+.log a:hover{
+    color :#ffc107
+}
+
+
+
+
+
+.checkItem{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 .registerBtn{
