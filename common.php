@@ -10,6 +10,7 @@ function outputHeader($page_title){
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css" text="text/css"/>
         <link rel="stylesheet" type="text/css" href="..\css/style.css">
+        <script type="text/javascript" src="../js/basket.js"></script>
         <script src="https://kit.fontawesome.com/b8991598b2.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -25,21 +26,6 @@ function outputHeader($page_title){
                 <a href="../index.php" class="logo">
                     <img src="../jpg/Logo.png"/>
                 </a>
-                <div class="box">
-                <i class="fa fa-search" aria-hidden="true" ></i>
-                <input type="text" name="">
-                </div>
-                <div class="right-menu">
-                    <a href="login.php">
-                        <i class="far fa-user"></i>
-                    </a>
-                    <a href="../cart.php" >
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                </div>             
-            </div>      
-        </div>
-
     END;
 }
 
@@ -49,7 +35,7 @@ function outputBannerNavigation($pageName){
     echo '<ul class="menu">';
         //Array of pages to link to
         $linkNames = array("Home", "Shop", "About", "Contact", "Sign up");// this is the pageName of HTML file
-        $linkAddresses = array("index.php", "shop.php","about.php", "contact.php", 'myAccount.php'); // the link
+        $linkAddresses = array("../index.php", "../shop.php","../about.php", "../contact.php", '../myAccount.php'); // the link
         //Output navigation
         for($x = 0; $x < count($linkNames); $x++){ // goes through the links to find matching pageName
     echo '<li><a ';      // print the anchor
@@ -58,10 +44,17 @@ function outputBannerNavigation($pageName){
     echo 'href="' . $linkAddresses[$x] . '">' . $linkNames[$x] . '</li></a>';  // goes to the page
         } // end for loop   
     echo '</ul>';
-    echo '</div>'; 
     echo '</nav>';
-    echo '<div class ="shadow">';
+    echo '<div class="right-menu">';
+    echo '<a href="login.php">';
+    echo    '<i class="far fa-user"></i>';
+    echo '</a>';
     echo '</div>';
+    echo '</div>';
+    echo '</div>'; 
+    echo '<div class="shadow"></div>';
+ 
+
 }
 
 function outputFooter(){
@@ -93,7 +86,14 @@ function outputFooterCMS(){
     END;
     }
 
+
 ?>
+
+<script>
+
+
+
+</script>
 
 
 

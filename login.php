@@ -19,7 +19,7 @@
 
 <script>
             //Global variables 
-            let loggedInStr = "<div class='log'>Logged in as </div><button class='logOutButton' onclick='logout()'>Logout</button><a href='viewDetails.php'>View details</a><a href='checkOrders.php'>View Orders</a>";
+            let loggedInStr = "<div class='log'>Logged in </div><button class='logOutButton' onclick='logout()'>Logout</button><a href='viewDetails.php'>View details</a><a href='checkOrders.php'>View Orders</a>";
             let loginStr = document.getElementById("LoginPara").innerHTML;
             let request = new XMLHttpRequest();
             
@@ -55,10 +55,10 @@
                         //Add data to page
                         if(responseData === "ok"){
                             document.getElementById("LoginPara").innerHTML = loggedInStr;
-                            document.getElementById("ErrorMessages").innerHTML = "";//Clear error messages
+                        
                         }
                         else
-                            document.getElementById("ErrorMessages").innerHTML = request.responseText;
+                            alert("Incorrect details. Try again");
                     }
                     else
                         document.getElementById("ErrorMessages").innerHTML = "Error communicating with server";
