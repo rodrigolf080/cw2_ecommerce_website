@@ -1,6 +1,7 @@
 <?php
     include ('../common.php');
-    outputHeader("CMS Login");  
+	outputHeader("CMS Login");  
+	outputBannerNavigation("Home");
 ?>      
 
 <!--- cms navbar -->
@@ -41,13 +42,13 @@
 		</div>	
 
 		<div class="form-group">
-    		<label for="productManufacturer">Password</label>
+    		<label for="productManufacturer">Manufacturer</label>
     		<input type="text" class="form-control" id="productManufacturer" name="manufacturer" placeholder="Manufacturer">
 		</div>
 
 		<div class="form-group">
     		<label for="productImage">Image</label>
-    		<input type="text" class="form-control" id="productImage" name="image" placeholder="D:\www\jpg\product_image.jpg">
+    		<input type="text" class="form-control" id="productImage" name="image" placeholder="/jpg/product_image.jpg">
 		</div>
 	
 	 
@@ -80,7 +81,6 @@ function add_product(){
 	let desc = document.getElementById("productDescription").value;
 	let cat = document.getElementById("productCategory").value;
 	let manu = document.getElementById("productManufacturer").value;
-	// test this functionality and implement image upload
 	let img = document.getElementById("productImage").value;
 	request.send("_title=" + tit + "&_price=" + pr + "&_description=" + desc + "&_category=" + cat + "&_manufacturer=" + manu +"&_image=" +img);
 	
@@ -97,5 +97,5 @@ function add_product(){
 
 
 <?php
-        outputFooterCMS();
+        outputFooter();
 ?>
